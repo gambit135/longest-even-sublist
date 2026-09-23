@@ -7,7 +7,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * Test class for the Main class.
+ * Test class for the Main class. Extensive test scenarios were created with the help of AI.
  *
  */
 class MainTest {
