@@ -8,6 +8,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
+        //Initial manual testing. See the MainTest class for more extensive testing scenarios.
         int[] arr = new int[]{2, 4, 6, 7, 8, 10, 11, 12, 14, 16, 18};
         List<Integer> longestSublistOfEvenNumbers = longestSublistOfEvenNumbers(arr);
         System.out.println("Longest even list is: " + longestSublistOfEvenNumbers.toString());
@@ -22,35 +23,26 @@ public class Main {
         //List that will be returned, containing the largest group of even numbers
         List<Integer> largestListOfEvenNumbers = new ArrayList<>();
 
-        //Size of actual list
-        int sizeOfCurrentList = 0;
-
-        //Size of largest list so far, for comparison
-        int sizeOfLargestList = 0;
-
         for (int c : arr) {
             if (c % 2 == 0) {
                 currentListOfEvenNumbers.add(c);
-                sizeOfCurrentList++;
+
             }
             else {
                 //If the recently reviewed list is larger than a previous large one
-                if (sizeOfCurrentList > sizeOfLargestList) {
+                if (currentListOfEvenNumbers.size() > largestListOfEvenNumbers.size()) {
                     //The recent list becomes the largest one
-                    sizeOfLargestList = sizeOfCurrentList;
                     largestListOfEvenNumbers = currentListOfEvenNumbers;
                 }
 
                 //reset current variables
                 currentListOfEvenNumbers = new ArrayList<>();
-                sizeOfCurrentList = 0;
             }
         }
 
         //Final check in case the list ends in an even number.
-        if (sizeOfCurrentList > sizeOfLargestList) {
+        if (currentListOfEvenNumbers.size() > largestListOfEvenNumbers.size()) {
             //The recent list becomes the largest one
-            sizeOfLargestList = sizeOfCurrentList;
             largestListOfEvenNumbers = currentListOfEvenNumbers;
         }
 
