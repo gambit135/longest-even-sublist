@@ -15,8 +15,8 @@ public class Main {
     /**
      * This is still not the optimal solution, since it uses O(n) additional working space, without counting the actual result.
      * However, it works and is somewhat easy to read
-     * @param arr
-     * @return
+     * @param arr   An array containing odd an even numbers
+     * @return The longest continuous sublist of even numbers
      */
     public static List<Integer> longestSublistOfEvenNumbers(int[] arr){
 
