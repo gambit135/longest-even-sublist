@@ -11,7 +11,7 @@ public class Main {
         //Initial manual testing. See the MainTest class for more extensive testing scenarios.
         int[] arr = new int[]{2, 4, 6, 7, 8, 10, 11, 12, 14, 16, 18};
         List<Integer> longestSublistOfEvenNumbers = longestSublistOfEvenNumbers(arr);
-        System.out.println("Longest even list is: " + longestSublistOfEvenNumbers.toString());
+        System.out.println("Longest even list is: " + longestSublistOfEvenNumbers);
 
     }
 
